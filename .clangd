@@ -1,0 +1,19 @@
+CompileFlags:
+    Add: [
+        -std=gnu11,
+        -nostdlib,
+        -fno-stack-protector,
+        -Werror=vla,
+        -Wall,
+        -Wextra,
+        -Wpedantic,
+        -Wno-language-extension-token,
+        -Wno-empty-translation-unit,
+        -xc
+    ]
+
+If:
+  PathMatch: .*\.(h|c)
+Diagnostics:
+  UnusedIncludes: None
+  MissingIncludes: None
